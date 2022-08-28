@@ -1,0 +1,149 @@
+#root {
+    width: 100%;
+    background-color: var(--bs-gray-300);
+
+    * {
+        outline: 0;
+        box-sizing: border-box;
+    }
+
+    .app {
+        max-width: 750px;
+        min-height: 100vh;
+        margin: auto;
+        padding: 10px;
+
+        .content {
+            padding: 20px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+form {
+    width: 100%;
+
+    ul {
+        li {
+            padding: 10px 0px;
+
+            &:not(:last-child) {
+                border-bottom: dashed 1px var(--bs-gray-300);
+            }
+        }
+    }
+
+    label {
+        width: 100%;
+        font-style: italic;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .note {
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+    .feedback {
+        margin-top: 3px;
+
+        input[type="checkbox"] {
+            display: none;
+
+            &+p {
+                display: block;
+            }
+
+            &:checked+p {
+                display: none;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            color: var(--bs-danger);
+            background-color: rgba($color: var(--bs-danger-rgb), $alpha: 0.2);
+            margin: 0;
+            padding: 2px 4px;
+        }
+    }
+
+    input:not([type="checkbox"]):not([type="radio"]),
+    select,
+    textarea {
+        width: 100%;
+        border: solid 1px var(--bs-gray-500);
+        padding: 3px 5px;
+        border-radius: 5px;
+        margin: 2px 0px;
+
+        &:invalid {
+            border-color: var(--bs-danger);
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        &+label {
+            display: inline;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+        }
+    }
+
+    button {
+        line-height: 2.5rem;
+        width: 100%;
+        border: none;
+        background-color: var(--bs-primary);
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    &:invalid {
+        button[type="submit"] {
+            background-color: var(--bs-gray-300);
+        }
+    }
+}
+
+dl.checktable {
+    dt {
+        font-style: italic;
+    }
+
+    dd {
+        border-left: solid 3px var(--bs-gray-300);
+        padding: 5px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.message {
+    padding: 10px;
+
+    &.error {
+        background-color: rgba($color: var(--bs-danger-rgb), $alpha: 0.2);
+        color: var(--bs-danger);
+    }
+}
+
+.historyback {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
+}
